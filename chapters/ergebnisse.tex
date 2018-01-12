@@ -1,0 +1,30 @@
+% !TEX root = ../maturaarbeit.tex
+\chapter{Ergebnisse}\label{chap:ergebnisse}
+Die Ergebnisse einer anderen Arbeit sind in \cite{Boney96} dokumentiert.
+\LaTeX-Dateien können auch einfach per \verb+\input{pfad/zum/dokument.tex}+ eingebunden werden, so wie dies mit \fref{tab:tabelle2} geschehen ist.
+\input{tables/tabelle2.tex}
+Einige andere Ergebnisse finden sich in \fref{tab:tabelle1}.\\
+Wenn man \LaTeX\ nicht zu fest dreinredet, macht es was es soll.
+
+\begin{table}
+  \centering
+  \caption[CUDA Messdaten]{Ein paar CUDA Messdaten}
+  \label{tab:tabelle1}
+  \footnotesize
+  \begin{tabular}{@{}ld{3.0}*{2}{d{4.2}}d{2.2}@{}}
+    \toprule
+    \multicolumn{0}{@{}l}{Method} & \multicolumn{1}{c}{\# Calls} & \multicolumn{1}{c}{GPU time [\textmu s]} & \multicolumn{1}{c}{CPU time [\textmu s]} & \multicolumn{1}{c@{}}{GPU time [\%]}\\
+    \midrule
+    sumvecel\_kernel&386&3095.55&3613.56&19.84\\
+    matvec\_kernel&193&2587.87&2848.87&16.58\\
+    mattransvec\_kernel&193&2566.69&2792.69&16.45\\
+    scalvec\_kernel&386&2322.11&2778.11&14.88\\
+    squarevecel\_kernel&386&2098.62&2547.62&13.45\\
+    sasum\_gld\_main&193&2044.48&2299.48&13.10\\
+    memcpyDtoH&202&831.52&3632.52&5.32\\
+    memcpyHtoD&7&28.54&36.54&0.18\\
+    sger\_main\_hw&3&27.04&30.04&0.17\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\newpage
