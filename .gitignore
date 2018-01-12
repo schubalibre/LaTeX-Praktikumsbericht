@@ -1,0 +1,10 @@
+#exclude generated files
+*.pdf
+*.aux
+*.log
+
+#include figure files
+!Fig*.pdf
+
+#some excluded directories
+/extra
