@@ -2,6 +2,7 @@
 *.pdf
 *.aux
 *.log
+maturaarbeit.synctex.gz
 
 #include figure files
 !Fig*.pdf
